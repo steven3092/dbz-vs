@@ -1,0 +1,54 @@
+.start {
+    border: none;
+    padding: 1.1em;
+    outline: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: 1.1em;
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0,0,0,.45);
+  }
+
+  @media (max-width:480px) {
+    .start {
+        width: 70px;
+        height: 40px;
+        padding: 0.4em;
+
+	}
+	
+	
+}
+
+.start:before, .start:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 10em;
+      transform: translateX(-50%) translateY(-50%);
+      width: 120%;
+      height: 120%;
+      content: '';
+      z-index: -2;
+      background-size: 400% 400%;
+      background: linear-gradient(-45deg, #ed7f38, #d90c0c, #fff033, #e60e42);
+      
+    }
+.start:before {
+      filter: blur(7px);
+      transition: all .25s ease;
+      animation: pulse 10s infinite ease;
+    }
+.start:after {
+      filter: blur(0.3px);
+    }
+.start:hover:before {
+        width: 135%;
+        height: 135%;  
+    }
+  
